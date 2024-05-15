@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RechercheAnnonce">
+
+    <Button
+        android:id="@+id/rchIdA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_centerHorizontal="true"
+        android:text="Recherche par Id"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/rchInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rchIdA"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:text="Recherche par Filtre"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/retour"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rchInfo"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:text="Retour"
+        android:textSize="20sp"
+        android:background="@color/red" />
+
+</RelativeLayout>

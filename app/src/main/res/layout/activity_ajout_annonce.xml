@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".AjoutAnnonce">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Titre "Ajout Annonce" centré -->
+            <TextView
+                android:id="@+id/textViewTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ajout Annonce"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"/>
+
+            <!-- Petit titre "Image" à gauche -->
+            <TextView
+                android:id="@+id/textViewImageTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Image"
+                android:textSize="16sp"
+                android:layout_marginTop="20dp"/>
+
+            <!-- ImageView -->
+            <ImageView
+                android:id="@+id/imgV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/app"
+                android:scaleType="fitCenter"/>
+
+            <!-- Petit titre "Type du Bien" à gauche -->
+            <TextView
+                android:id="@+id/textViewTypeBienTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Type du Bien"
+                android:textSize="16sp"
+                android:layout_marginTop="20dp"/>
+
+            <!-- RadioGroup pour le type de bien -->
+            <RadioGroup
+                android:id="@+id/radioGroupTypeBien"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <!-- Bouton radio pour villa -->
+                <RadioButton
+                    android:id="@+id/radioVilla"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Villa" />
+
+                <!-- Bouton radio pour appartement -->
+                <RadioButton
+                    android:id="@+id/radioAppartement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Appartement" />
+
+                <!-- Bouton radio pour terrain -->
+                <RadioButton
+                    android:id="@+id/radioTerrain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Terrain" />
+
+                <!-- Bouton radio pour bureau -->
+                <RadioButton
+                    android:id="@+id/radioBureau"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bureau" />
+
+            </RadioGroup>
+
+            <!-- Petit titre "Type de l'annonce" à gauche -->
+            <TextView
+                android:id="@+id/textViewTypeAnnonceTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Type de l'annonce"
+                android:textSize="16sp"
+                android:layout_marginTop="20dp"/>
+
+            <!-- RadioGroup pour le type d'annonce -->
+            <RadioGroup
+                android:id="@+id/radioGroupTypeAnnonce"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <!-- Bouton radio pour vente -->
+                <RadioButton
+                    android:id="@+id/radioVente"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Vente" />
+
+                <!-- Bouton radio pour location -->
+                <RadioButton
+                    android:id="@+id/radioLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Location" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textViewEtatAnnonceTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Etat de l'annonce"
+                android:textSize="16sp"
+                android:layout_marginTop="20dp"/>
+            <RadioGroup
+                android:id="@+id/radioGroupEtatAnnonce"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <!-- Bouton radio pour vente -->
+                <RadioButton
+                    android:id="@+id/radioActive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Active" />
+
+                <!-- Bouton radio pour location -->
+                <RadioButton
+                    android:id="@+id/radioCloturee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cloturée" />
+
+            </RadioGroup>
+
+            <!-- Champs d'entrée pour les informations -->
+
+            <!-- Input text pour l'ID annonce -->
+            <EditText
+                android:id="@+id/editTextIdAnnonce"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="ID Annonce"
+                android:textSize="16sp" />
+
+            <!-- Petit titre "Gouvernorat" à gauche -->
+            <TextView
+                android:id="@+id/textViewGouvernoratTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gouvernorat"
+                android:textSize="16sp"
+                android:layout_marginTop="20dp"/>
+
+            <!-- Drop down pour le gouvernorat -->
+            <!-- Vous pouvez remplacer le Spinner par une autre vue de sélection si nécessaire -->
+            <Spinner
+                android:id="@+id/spinnerGouvernorat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:entries="@array/gouvernorats_array"/>
+
+            <!-- Input text pour la ville -->
+            <EditText
+                android:id="@+id/editTextVille"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="Ville"
+                android:textSize="16sp" />
+
+            <!-- Input text pour l'adresse -->
+            <EditText
+                android:id="@+id/editTextAdresse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="Adresse"
+                android:textSize="16sp" />
+
+            <!-- Input text pour la superficie -->
+            <EditText
+                android:id="@+id/editTextSuperficie"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="Superficie"
+                android:textSize="16sp" />
+
+            <!-- Input text pour le prix -->
+            <EditText
+                android:id="@+id/editTextPrix"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="Prix"
+                android:textSize="16sp" />
+
+            <!-- Input text pour la date -->
+            <EditText
+                android:id="@+id/editTextDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="Date"
+                android:textSize="16sp" />
+
+            <!-- Input text pour la description -->
+            <EditText
+                android:id="@+id/editTextDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="Description"
+                android:textSize="16sp" />
+
+            <!-- Input text pour le nombre de chambres -->
+            <EditText
+                android:id="@+id/editTextNbChambres"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="Nombre de Chambres"
+                android:textSize="16sp" />
+
+            <!-- Bouton "Valider" -->
+            <Button
+                android:id="@+id/btnValider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Valider"
+                android:textColor="#FFFFFF"
+                android:background="#00FF00"
+                android:layout_gravity="center_horizontal"/>
+
+            <!-- Bouton "Retour" -->
+            <Button
+                android:id="@+id/btnRetour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Retour"
+                android:textColor="#FFFFFF"
+                android:background="#FF0000"
+                android:layout_gravity="center_horizontal"/>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

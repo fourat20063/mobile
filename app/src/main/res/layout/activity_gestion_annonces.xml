@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GestionAnnonces">
+
+    <Button
+        android:id="@+id/btnAjoutAnnonce"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_centerHorizontal="true"
+        android:text="Ajout Annonce"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btnSuppAnnonce"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnAjoutAnnonce"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:text="Supp Annonce"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btnRechercheAnnonce"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnSuppAnnonce"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:text="Rcherche Annonce"
+        android:textSize="20sp" />
+    <Button
+        android:id="@+id/btnModifAnnonce"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnRechercheAnnonce"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:text="Modifier Annonce"
+        android:textSize="20sp" />
+
+
+
+
+    <Button
+        android:id="@+id/btnRetour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnModifAnnonce"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:text="Retour"
+        android:textSize="16sp"
+        android:textColor="#FFFFFF"
+        android:background="#FF0000" />
+
+
+</RelativeLayout>

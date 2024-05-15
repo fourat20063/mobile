@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RechercheClient">
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recherche Client"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"/>
+
+    <!-- Petit titre pour email -->
+    <TextView
+        android:id="@+id/textViewCiviliteTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email du client :"
+        android:textSize="16sp"
+        android:layout_below="@id/textViewTitle"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"/>
+
+    <EditText
+        android:id="@+id/editTextEmailc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewCiviliteTitle"
+        android:layout_marginTop="20dp"
+        android:hint="Email"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/btnRecherche"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextEmailc"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentStart="true"
+        android:text="Recherche"
+        android:textColor="#FFFFFF"
+        android:background="#00FF00"/>
+
+    <Button
+        android:id="@+id/btnRetour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnRecherche"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentEnd="true"
+        android:text="Retour"
+        android:textColor="#FFFFFF"
+        android:background="#FF0000"/>
+
+</RelativeLayout>

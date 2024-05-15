@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="3dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".AnnonceDetails">
+
+            <!-- ID TextView -->
+            <TextView
+                android:id="@+id/id_text_view"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:gravity="center"
+                android:text="ID :"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- typeB TextView -->
+            <TextView
+                android:id="@+id/typeB_text_view"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:gravity="center"
+                android:text="Type B :"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="parent" />
+
+            <TextView
+                android:id="@+id/typeA_text_view"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:gravity="center"
+                android:text="Type B :"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="parent" />
+
+            <TextView
+                android:id="@+id/gouvernerat_text_view"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:gravity="center"
+                android:text="Type B :"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="parent" />
+
+            <TextView
+                android:id="@+id/ville_text_view"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:gravity="center"
+                android:text="Type B :"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="parent" />
+
+            <TextView
+                android:id="@+id/adresse_text_view"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:gravity="center"
+                android:text="Type B :"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="parent" />
+
+            <TextView
+                android:id="@+id/superficie_text_view"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:gravity="center"
+                android:text="Type B :"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="parent" />
+
+            <TextView
+                android:id="@+id/prix_text_view"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:gravity="center"
+                android:text="Type B :"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="parent" />
+            <TextView
+                android:id="@+id/date_text_view"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:gravity="center"
+                android:text="Type B :"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="parent" />
+
+            <TextView
+                android:id="@+id/description_text_view"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:gravity="center"
+                android:text="Type B :"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="parent" />
+            <TextView
+                android:id="@+id/nbc_text_view"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:gravity="center"
+                android:text="Type B :"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="parent" />
+            <TextView
+                android:id="@+id/etat_text_view"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:gravity="center"
+                android:text="Type B :"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="parent" />
+
+
+            <!-- Modifier Button -->
+            <Button
+                android:id="@+id/modif"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:text="Modifier"
+                app:layout_constraintEnd_toStartOf="@+id/supp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etat_text_view" />
+
+            <!-- Supprimer Button -->
+            <Button
+                android:id="@+id/supp"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:text="Supprimer"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/modif"
+                app:layout_constraintTop_toBottomOf="@+id/etat_text_view" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</ScrollView>

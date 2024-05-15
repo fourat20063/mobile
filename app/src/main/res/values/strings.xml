@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">SeLoger</string>
+    <string name="log">login</string>
+    <string name="motdepasse">mot de passe</string>
+    <string name="se_connecter">se connecter</string>
+    <string name="email">email</string>
+    <string name="retour">Retour</string>
+    <string name="gestion_annonce">Gestion Annonce</string>
+    <string name="gestion_client">Gestion Client</string>
+    <string name="bienvenue">bienvenue</string>
+
+    <string-array name="gouvernorats_array">
+        <item>Ariana</item>
+        <item>Béja</item>
+        <item>Ben Arous</item>
+        <item>Bizerte</item>
+        <item>Gabes</item>
+        <item>Gafsa</item>
+        <item>Jendouba</item>
+        <item>Kairouan</item>
+        <item>Kasserine</item>
+        <item>Kebili</item>
+        <item>Kef</item>
+        <item>Mahdia</item>
+        <item>Manouba</item>
+        <item>Medenine</item>
+        <item>Monastir</item>
+        <item>Nabeul</item>
+        <item>Sfax</item>
+        <item>Sidi Bouzid</item>
+        <item>Siliana</item>
+        <item>Sousse</item>
+        <item>Tataouine</item>
+        <item>Tozeur</item>
+        <item>Tunis</item>
+        <item>Zaghouan</item>
+    </string-array>
+
+
+</resources>
