@@ -9,14 +9,14 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class AnnonceDetails extends AppCompatActivity {
-
+    Button retour,supprimer,modifier;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_annonce_details);
 
         Intent intent=getIntent();
-        Annonce a=(Annonce) intent.getSerializableExtra("ann");
+        Annonce a=(Annonce) intent.getSerializableExtra("annonce");
 
         TextView idTv=findViewById(R.id.id_text_view);
         TextView typeBTv=findViewById(R.id.typeB_text_view);
@@ -44,15 +44,27 @@ public class AnnonceDetails extends AppCompatActivity {
         descTv.setText("Description :"+a.getDescription());
         dateTv.setText("Date :" + a.getDate());
 
-        Button modifBtn =findViewById(R.id.modif);
-        modifBtn.setOnClickListener(new View.OnClickListener() {
+        modifier=findViewById(R.id.modif);
+
+        modifier.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), ModifAnnonce.class);
-                intent.putExtra("annModif",a);
+                intent.putExtra("annonce",a);
                 startActivity(intent);
             }
         });
+
+        retour=findViewById(R.id.retour);
+        retour.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), RechercheAnnonce.class);
+                startActivity(intent);
+            }
+        });
+
+
 
 
 

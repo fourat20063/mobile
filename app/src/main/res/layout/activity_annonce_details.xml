@@ -9,152 +9,201 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="3dp">
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:padding="16dp"
             tools:context=".AnnonceDetails">
 
             <!-- ID TextView -->
             <TextView
                 android:id="@+id/id_text_view"
                 android:layout_width="0dp"
-                android:layout_height="52dp"
+                android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="ID :"
+                android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <!-- typeB TextView -->
+            <!-- Type B TextView -->
             <TextView
                 android:id="@+id/typeB_text_view"
                 android:layout_width="0dp"
-                android:layout_height="52dp"
+                android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="Type B :"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="parent" />
+                app:layout_constraintTop_toBottomOf="@id/id_text_view" />
 
+            <!-- Type A TextView -->
             <TextView
                 android:id="@+id/typeA_text_view"
                 android:layout_width="0dp"
-                android:layout_height="52dp"
+                android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Type B :"
+                android:text="Type A :"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="parent" />
+                app:layout_constraintTop_toBottomOf="@id/typeB_text_view" />
 
+            <!-- Gouvernerat TextView -->
             <TextView
                 android:id="@+id/gouvernerat_text_view"
                 android:layout_width="0dp"
-                android:layout_height="52dp"
+                android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Type B :"
+                android:text="Gouvernerat :"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="parent" />
+                app:layout_constraintTop_toBottomOf="@id/typeA_text_view" />
 
+            <!-- Ville TextView -->
             <TextView
                 android:id="@+id/ville_text_view"
                 android:layout_width="0dp"
-                android:layout_height="52dp"
+                android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Type B :"
+                android:text="Ville :"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="parent" />
+                app:layout_constraintTop_toBottomOf="@id/gouvernerat_text_view" />
 
+            <!-- Adresse TextView -->
             <TextView
                 android:id="@+id/adresse_text_view"
                 android:layout_width="0dp"
-                android:layout_height="52dp"
+                android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Type B :"
+                android:text="Adresse :"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="parent" />
+                app:layout_constraintTop_toBottomOf="@id/ville_text_view" />
 
+            <!-- Superficie TextView -->
             <TextView
                 android:id="@+id/superficie_text_view"
                 android:layout_width="0dp"
-                android:layout_height="52dp"
+                android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Type B :"
+                android:text="Superficie :"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="parent" />
+                app:layout_constraintTop_toBottomOf="@id/adresse_text_view" />
 
+            <!-- Prix TextView -->
             <TextView
                 android:id="@+id/prix_text_view"
                 android:layout_width="0dp"
-                android:layout_height="52dp"
+                android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Type B :"
+                android:text="Prix :"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="parent" />
+                app:layout_constraintTop_toBottomOf="@id/superficie_text_view" />
+
+            <!-- Date TextView -->
             <TextView
                 android:id="@+id/date_text_view"
                 android:layout_width="0dp"
-                android:layout_height="52dp"
+                android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Type B :"
+                android:text="Date :"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="parent" />
+                app:layout_constraintTop_toBottomOf="@id/prix_text_view" />
 
+            <!-- Description TextView -->
             <TextView
                 android:id="@+id/description_text_view"
                 android:layout_width="0dp"
-                android:layout_height="52dp"
+                android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Type B :"
+                android:text="Description :"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="parent" />
+                app:layout_constraintTop_toBottomOf="@id/date_text_view" />
+
+            <!-- Nbc TextView -->
             <TextView
                 android:id="@+id/nbc_text_view"
                 android:layout_width="0dp"
-                android:layout_height="52dp"
+                android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Type B :"
+                android:text="Nbc :"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="parent" />
+                app:layout_constraintTop_toBottomOf="@id/description_text_view" />
+
+            <!-- Etat TextView -->
             <TextView
                 android:id="@+id/etat_text_view"
                 android:layout_width="0dp"
-                android:layout_height="52dp"
+                android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Type B :"
+                android:text="Etat :"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="parent" />
-
+                app:layout_constraintTop_toBottomOf="@id/nbc_text_view" />
 
             <!-- Modifier Button -->
             <Button
                 android:id="@+id/modif"
                 android:layout_width="0dp"
-                android:layout_height="80dp"
+                android:layout_height="wrap_content"
                 android:text="Modifier"
+                android:layout_marginTop="16dp"
                 app:layout_constraintEnd_toStartOf="@+id/supp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/etat_text_view" />
+                app:layout_constraintTop_toBottomOf="@id/etat_text_view" />
 
             <!-- Supprimer Button -->
             <Button
                 android:id="@+id/supp"
                 android:layout_width="0dp"
-                android:layout_height="80dp"
+                android:layout_height="wrap_content"
                 android:text="Supprimer"
+                android:layout_marginTop="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/modif"
-                app:layout_constraintTop_toBottomOf="@+id/etat_text_view" />
+                app:layout_constraintTop_toBottomOf="@id/etat_text_view" />
+            <Button
+                android:id="@+id/retour"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Retour"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/supp" />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

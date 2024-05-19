@@ -76,14 +76,16 @@ public class AjoutClient extends AppCompatActivity {
 
                    Boolean isInserted = dbConnect.ajouterClient(emailC.getText().toString().trim(),
                             nomC.getText().toString().trim(),
-                            prenomC.toString().trim(),
+                            prenomC.getText().toString().trim(),
                             adresseC.getText().toString().trim(),
                             villeC.getText().toString().trim(),
-                            Integer.parseInt(telC.getText().toString().trim()),
                             Integer.parseInt(cpC.getText().toString().trim()),
+                            Integer.parseInt(telC.getText().toString().trim()),
                             civilite);
                     if (isInserted) {
                         Toast.makeText(AjoutClient.this, "Client Ajoute avec Succes !", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(getApplicationContext(), GestionClients.class);
+                        startActivity(intent);
                     }
                     else{
                         Toast.makeText(AjoutClient.this, "Error!", Toast.LENGTH_SHORT).show();

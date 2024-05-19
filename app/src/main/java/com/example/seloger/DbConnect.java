@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
@@ -195,6 +196,23 @@ public class DbConnect extends SQLiteOpenHelper {
         return annonces;
     }
 
-
+    public int updateAnnonce(Annonce annonce){
+        SQLiteDatabase db=this.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+        cv.put(Annonce_id,annonce.getId());
+        cv.put(Annonce_typeB,annonce.getTypeB());
+        cv.put(Annonce_typeA,annonce.getTypeA());
+        cv.put(Annonce_gouvernerat,annonce.getGouvernerat());
+        cv.put(Annonce_ville,annonce.getVille());
+        cv.put(Annonce_adresse,annonce.getAdresse());
+        cv.put(Annonce_superficie,annonce.getSuperficie());
+        cv.put(Annonce_prix,annonce.getPrix());
+        cv.put(Annonce_date,annonce.getDate());
+        cv.put(Annonce_description,annonce.getDescription());
+        cv.put(Annonce_nbc,annonce.getNbc());
+        cv.put(Annonce_etat,annonce.getEtat());
+        int rslt =db.update(Table_Annonces,cv,"idA=?",new String[] {annonce.getId()});
+        return rslt;
+    }
 
 }

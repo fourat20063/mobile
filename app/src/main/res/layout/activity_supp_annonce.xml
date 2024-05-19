@@ -16,7 +16,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"/>
 
-    <!-- Petit titre pour email -->
+    <!-- Petit titre pour ID -->
     <TextView
         android:id="@+id/textViewIdA"
         android:layout_width="wrap_content"
@@ -37,7 +37,7 @@
         android:textSize="16sp" />
 
     <Button
-        android:id="@+id/btnRecherche"
+        android:id="@+id/btnSuppAnnonce"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/editTextIdA"
@@ -51,7 +51,7 @@
         android:id="@+id/btnRetour"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/btnRecherche"
+        android:layout_below="@id/btnSuppAnnonce"
         android:layout_marginTop="20dp"
         android:layout_alignParentEnd="true"
         android:text="Retour"

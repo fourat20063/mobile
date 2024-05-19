@@ -52,12 +52,6 @@
             android:name=".HomeAdmin"
             android:exported="false" />
         <activity
-            android:name=".Gestion_Client"
-            android:exported="false" />
-        <activity
-            android:name=".loginActivity"
-            android:exported="false" />
-        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

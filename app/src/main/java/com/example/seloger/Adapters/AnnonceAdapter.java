@@ -39,7 +39,7 @@ public class AnnonceAdapter extends RecyclerView.Adapter<AnnonceViewHolder> {
     public void onBindViewHolder(@NonNull AnnonceViewHolder holder, int position) {
         Annonce a=annonces.get(position);
         holder.idTv.setText("ID : " +a.getId());
-        holder.prixTv.setText("Prix : " + String.valueOf(a.getPrix()));
+        holder.prixTv.setText("Prix : " + a.getPrix());
 
 
         Bitmap imageContent = BitmapFactory.decodeByteArray(a.getImg(),0,a.getImg().length);

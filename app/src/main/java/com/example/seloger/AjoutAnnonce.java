@@ -125,9 +125,9 @@ public class AjoutAnnonce extends AppCompatActivity {
                             typeA="vente";
                         }
                         if(active.isChecked()){
-                            etat="location";
+                            etat="active";
                         }else{
-                            etat="vente";
+                            etat="cloture";
                         }
 
                         Annonce annonce= new Annonce(idA1,typeB,typeA,gouvernorat,ville1,adresse1,superficie1,prix1,date1,description1,nbc1,etat);
