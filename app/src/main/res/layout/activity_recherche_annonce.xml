@@ -1,39 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RechercheAnnoncenn">
+    android:padding="16dp"
+    android:background="?android:attr/colorBackground"
+    tools:context=".RechercheAnnonce">
 
-    <Button
+    <!-- Recherche par Id Button -->
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/rchIdA"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
-        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
         android:text="Recherche par Id"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:backgroundTint="?attr/colorPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
+    <!-- Recherche par Filtre Button -->
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/rchInfo"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/rchIdA"
-        android:layout_marginTop="20dp"
-        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
         android:text="Recherche par Filtre"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:backgroundTint="?attr/colorPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rchIdA" />
 
-    <Button
+    <!-- Retour Button -->
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/retour"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/rchInfo"
-        android:layout_marginTop="20dp"
-        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="100dp"
         android:text="Retour"
         android:textSize="20sp"
-        android:background="@color/red" />
+        android:textStyle="bold"
+        android:textColor="?android:attr/textColorPrimaryInverse"
+        android:backgroundTint="@color/red"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rchInfo" />
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
