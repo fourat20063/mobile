@@ -1,63 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="?android:attr/colorBackground"
     tools:context=".GestionAnnonces">
 
+    <!-- Top Image -->
+    <ImageView
+        android:id="@+id/topImage"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/seloger" />
+
+    <!-- Ajout Annonce Button -->
     <Button
         android:id="@+id/btnAjoutAnnonce"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:layout_centerHorizontal="true"
+        android:layout_below="@id/topImage"
+        android:layout_marginTop="16dp"
         android:text="Ajout Annonce"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:backgroundTint="?attr/colorPrimary"
+        android:textColor="?android:attr/textColorPrimaryInverse"
+        android:padding="16dp" />
 
+    <!-- Supp Annonce Button -->
     <Button
         android:id="@+id/btnSuppAnnonce"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/btnAjoutAnnonce"
         android:layout_marginTop="20dp"
-        android:layout_centerHorizontal="true"
         android:text="Supp Annonce"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:backgroundTint="?attr/colorPrimary"
+        android:textColor="?android:attr/textColorPrimaryInverse"
+        android:padding="16dp" />
 
+    <!-- Recherche Annonce Button -->
     <Button
         android:id="@+id/btnRechercheAnnonce"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/btnSuppAnnonce"
         android:layout_marginTop="20dp"
-        android:layout_centerHorizontal="true"
-        android:text="Rcherche Annonce"
-        android:textSize="20sp" />
+        android:text="Recherche Annonce"
+        android:textSize="20sp"
+        android:backgroundTint="?attr/colorPrimary"
+        android:textColor="?android:attr/textColorPrimaryInverse"
+        android:padding="16dp" />
+
+    <!-- Modifier Annonce Button -->
     <Button
         android:id="@+id/btnModifAnnonce"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/btnRechercheAnnonce"
         android:layout_marginTop="20dp"
-        android:layout_centerHorizontal="true"
         android:text="Modifier Annonce"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:backgroundTint="?attr/colorPrimary"
+        android:textColor="?android:attr/textColorPrimaryInverse"
+        android:padding="16dp" />
 
-
-
-
+    <!-- Retour Button -->
     <Button
         android:id="@+id/btnRetour"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/btnModifAnnonce"
         android:layout_marginTop="20dp"
-        android:layout_centerHorizontal="true"
         android:text="Retour"
-        android:textSize="16sp"
-        android:textColor="#FFFFFF"
-        android:background="#FF0000" />
-
+        android:textSize="20sp"
+        android:backgroundTint="@color/red"
+        android:textColor="?android:attr/textColorPrimaryInverse"
+        android:padding="16dp" />
 
 </RelativeLayout>

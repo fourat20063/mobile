@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class AnnonceDetails extends AppCompatActivity {
     Button retour,supprimer,modifier;
@@ -64,6 +65,17 @@ public class AnnonceDetails extends AppCompatActivity {
             }
         });
 
+         supprimer=findViewById(R.id.supp);
+         DbConnect db=new DbConnect(this);
+         supprimer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                db.deleteAnnonce(a.getId());
+                Toast.makeText(AnnonceDetails.this, "Suppression effectuee !", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getApplicationContext(), RechercheAnnonce.class);
+                startActivity(intent);
+            }
+        });
 
 
 

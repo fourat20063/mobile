@@ -25,7 +25,7 @@ public class DbConnect extends SQLiteOpenHelper {
     public static final String Client_cp="cp";
     public static final String Client_tel="tel";
     public static final String Client_civilite="civilite";
-//*********************************************************************
+    //*********************************************************************
     public static final String Table_Annonces="Annonces";
     //Colones de la table Client
     public static final String Annonce_id="idA";
@@ -213,6 +213,11 @@ public class DbConnect extends SQLiteOpenHelper {
         cv.put(Annonce_etat,annonce.getEtat());
         int rslt =db.update(Table_Annonces,cv,"idA=?",new String[] {annonce.getId()});
         return rslt;
+    }
+
+    public void deleteAnnonce(String id){
+        SQLiteDatabase db=getWritableDatabase();
+        db.delete(Table_Annonces,"idA=?",new String[] {id});
     }
 
 }

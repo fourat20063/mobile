@@ -71,6 +71,8 @@ public class ModifAnnonce extends AppCompatActivity {
                 int rslt = db.updateAnnonce(annonce);
                 if (rslt != -1){
                     Toast.makeText(ModifAnnonce.this, "Mise a Jour effectuee !", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(getApplicationContext(), RechercheAnnonce.class);
+                    startActivity(intent);
                 }
             }
         });

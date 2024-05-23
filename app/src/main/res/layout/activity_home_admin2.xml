@@ -1,39 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="?android:attr/colorBackground"
     tools:context=".HomeAdmin">
 
-    <Button
-        android:id="@+id/gestionClient"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:layout_centerHorizontal="true"
-        android:text="Gestion Clients"
-        android:textSize="20sp" />
+    <!-- Top Image -->
+    <ImageView
+        android:id="@+id/topImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/seloger"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.4" />
 
-    <Button
-        android:id="@+id/gestionAnnonce"
-        android:layout_width="match_parent"
+    <!-- Gestion Clients Card -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/gestionClientCard"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/gestionClient"
-        android:layout_marginTop="20dp"
-        android:layout_centerHorizontal="true"
-        android:text="Gestion Annonces"
-        android:textSize="20sp" />
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:layout_constraintTop_toBottomOf="@id/topImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp">
 
-    <Button
-        android:id="@+id/deconnexion"
-        android:layout_width="match_parent"
+        <Button
+            android:id="@+id/gestionClient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gestion Clients"
+            android:textSize="20sp"
+            android:padding="16dp"
+            android:backgroundTint="?attr/colorPrimary"
+            android:textColor="?android:attr/textColorPrimaryInverse" />
+    </androidx.cardview.widget.CardView>
+
+    <!-- Gestion Annonces Card -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/gestionAnnonceCard"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/gestionAnnonce"
-        android:layout_marginTop="20dp"
-        android:layout_centerHorizontal="true"
-        android:text="Deconnexion"
-        android:textSize="20sp"
-        android:background="@color/red" />
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:layout_constraintTop_toBottomOf="@id/gestionClientCard"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp">
 
-</RelativeLayout>
+        <Button
+            android:id="@+id/gestionAnnonce"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gestion Annonces"
+            android:textSize="20sp"
+            android:padding="16dp"
+            android:backgroundTint="?attr/colorPrimary"
+            android:textColor="?android:attr/textColorPrimaryInverse" />
+    </androidx.cardview.widget.CardView>
+
+    <!-- Déconnexion Card -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/deconnexionCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:layout_constraintTop_toBottomOf="@id/gestionAnnonceCard"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="32dp">
+
+        <Button
+            android:id="@+id/deconnexion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Déconnexion"
+            android:textSize="20sp"
+            android:padding="16dp"
+            android:backgroundTint="@color/red"
+            android:textColor="?android:attr/textColorPrimaryInverse" />
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

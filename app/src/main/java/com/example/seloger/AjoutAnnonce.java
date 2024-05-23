@@ -22,12 +22,12 @@ import java.io.InputStream;
 
 public class AjoutAnnonce extends AppCompatActivity {
 
-   RadioButton cloture,active,terrain,appartement,villa,bureau,vente,location;
-   EditText idA,ville,adresse,superficie,prix,date,description,nbc;
-   Spinner spn;
-   Button valider,retour;
-   ImageView img;
-   static byte[] imageContent;
+    RadioButton cloture,active,terrain,appartement,villa,bureau,vente,location;
+    EditText idA,ville,adresse,superficie,prix,date,description,nbc;
+    Spinner spn;
+    Button valider,retour;
+    ImageView img;
+    static byte[] imageContent;
 
 
     @Override
@@ -62,6 +62,7 @@ public class AjoutAnnonce extends AppCompatActivity {
         //les boutons
         valider=findViewById(R.id.btnValider);
         retour=findViewById(R.id.btnRetour);
+
         //image
         img = findViewById(R.id.imgV);
 
@@ -100,7 +101,7 @@ public class AjoutAnnonce extends AppCompatActivity {
                 else{
                     DbConnect  db= new DbConnect(AjoutAnnonce.this);
                     if(db.checkAnnonce(idA1))
-                    { Toast.makeText(AjoutAnnonce.this, "Client Existant!", Toast.LENGTH_SHORT).show();}
+                    { Toast.makeText(AjoutAnnonce.this, "Annonce Existante!", Toast.LENGTH_SHORT).show();}
 
                     else{
                         Integer superficie1 = Integer.parseInt(superficie2);
@@ -137,6 +138,14 @@ public class AjoutAnnonce extends AppCompatActivity {
                     }
 
                 }
+            }
+        });
+
+        retour.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), GestionAnnonces.class);
+                startActivity(intent);
             }
         });
     }
