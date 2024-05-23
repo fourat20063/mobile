@@ -9,17 +9,16 @@ import android.widget.Button;
 
 public class HomeAdmin extends AppCompatActivity {
 
-    Button gestionClient , gestionAnnone, deconnexion;
-
+    Button gestionClient, gestionAnnone, deconnexion;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_admin2);
 
-        gestionAnnone= findViewById(R.id.gestionAnnonce);
-        gestionClient= findViewById(R.id.gestionClient);
-        deconnexion=findViewById(R.id.deconnexion);
+        gestionAnnone = findViewById(R.id.gestionAnnonce);
+        gestionClient = findViewById(R.id.gestionClient);
+        deconnexion = findViewById(R.id.deconnexion);
 
         gestionClient.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -32,10 +31,22 @@ public class HomeAdmin extends AppCompatActivity {
         gestionAnnone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent= new Intent(getApplicationContext(), GestionAnnonces.class);
+                Intent intent = new Intent(getApplicationContext(), GestionAnnonces.class);
                 startActivity(intent);
             }
         });
 
+        deconnexion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Clear any stored session data if applicable
+
+                // Redirect to login screen
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intent);
+                finish();
+            }
+        });
     }
 }
