@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="?android:attr/colorBackground"
     tools:context=".AjoutClient">
 
+    <!-- Title -->
     <TextView
         android:id="@+id/textViewTitle"
         android:layout_width="wrap_content"
@@ -13,8 +16,11 @@
         android:text="Ajout Client"
         android:textSize="24sp"
         android:textStyle="bold"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"/>
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp" />
 
     <!-- Petit titre pour la civilité -->
     <TextView
@@ -23,19 +29,21 @@
         android:layout_height="wrap_content"
         android:text="Civilité"
         android:textSize="16sp"
-        android:layout_below="@id/textViewTitle"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"/>
+        app:layout_constraintTop_toBottomOf="@id/textViewTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp" />
 
     <!-- RadioGroup pour la civilité -->
     <RadioGroup
         android:id="@+id/radioGroupCivility"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/textViewCiviliteTitle"
-        android:layout_alignParentStart="true"
+        app:layout_constraintTop_toBottomOf="@id/textViewCiviliteTitle"
+        app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="10dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_marginStart="20dp">
 
         <!-- Bouton radio pour M. -->
         <RadioButton
@@ -59,91 +67,130 @@
             android:text="Mme" />
     </RadioGroup>
 
-
     <!-- Champs d'entrée pour les informations -->
     <EditText
         android:id="@+id/editTextNom"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/radioGroupCivility"
+        app:layout_constraintTop_toBottomOf="@id/radioGroupCivility"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="20dp"
         android:hint="Nom"
         android:textSize="16sp" />
 
     <EditText
         android:id="@+id/editTextPrenom"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/editTextNom"
+        app:layout_constraintTop_toBottomOf="@id/editTextNom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="10dp"
         android:hint="Prénom"
         android:textSize="16sp" />
 
     <EditText
         android:id="@+id/editTextAdresse"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/editTextPrenom"
+        app:layout_constraintTop_toBottomOf="@id/editTextPrenom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="10dp"
         android:hint="Adresse"
         android:textSize="16sp" />
 
     <EditText
         android:id="@+id/editTextVille"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/editTextAdresse"
+        app:layout_constraintTop_toBottomOf="@id/editTextAdresse"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="10dp"
         android:hint="Ville"
         android:textSize="16sp" />
 
     <EditText
         android:id="@+id/editTextCodePostal"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/editTextVille"
+        app:layout_constraintTop_toBottomOf="@id/editTextVille"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="10dp"
         android:hint="Code Postal"
         android:textSize="16sp" />
 
     <EditText
         android:id="@+id/editTextTelephone"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/editTextCodePostal"
+        app:layout_constraintTop_toBottomOf="@id/editTextCodePostal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="10dp"
         android:hint="Téléphone"
         android:textSize="16sp" />
 
     <EditText
         android:id="@+id/editTextEmail"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/editTextTelephone"
+        app:layout_constraintTop_toBottomOf="@id/editTextTelephone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="10dp"
         android:hint="Email"
         android:textSize="16sp" />
 
-    <Button
-        android:id="@+id/btnValider"
-        android:layout_width="wrap_content"
+    <!-- Valider Button -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/validerCard"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/editTextEmail"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:layout_constraintTop_toBottomOf="@id/editTextEmail"
+        app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="20dp"
-        android:layout_alignParentStart="true"
-        android:text="Valider"
-        android:textColor="#FFFFFF"
-        android:background="#00FF00"/>
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintEnd_toStartOf="@id/retourCard">
 
-    <Button
-        android:id="@+id/btnRetour"
-        android:layout_width="wrap_content"
+        <Button
+            android:id="@+id/btnValider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Valider"
+            android:padding="16dp"
+            android:backgroundTint="@color/green"
+            android:textColor="?android:attr/textColorPrimaryInverse" />
+    </androidx.cardview.widget.CardView>
+
+    <!-- Retour Button -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/retourCard"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/editTextEmail"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:layout_constraintTop_toBottomOf="@id/editTextEmail"
+        app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="20dp"
-        android:layout_alignParentEnd="true"
-        android:text="Retour"
-        android:textColor="#FFFFFF"
-        android:background="#FF0000"/>
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintStart_toEndOf="@id/validerCard">
 
-</RelativeLayout>
+        <Button
+            android:id="@+id/btnRetour"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Retour"
+            android:padding="16dp"
+            android:backgroundTint="@color/red"
+            android:textColor="?android:attr/textColorPrimaryInverse" />
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
