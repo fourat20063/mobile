@@ -17,7 +17,7 @@ public class GestionAnnonces extends AppCompatActivity {
         setContentView(R.layout.activity_gestion_annonces);
 
         btnA=findViewById(R.id.btnAjoutAnnonce);
-        btnM=findViewById(R.id.btnModifAnnonce);
+
         btnR=findViewById(R.id.btnRechercheAnnonce);
         btnS=findViewById(R.id.btnSuppAnnonce);
         btnRetour=findViewById(R.id.btnRetour);
@@ -45,13 +45,7 @@ public class GestionAnnonces extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        btnM.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), ModifAnnonce.class);
-                startActivity(intent);
-            }
-        });
+
         btnRetour.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class GestionClients extends AppCompatActivity {
 
-    Button ajoutClient , rechercheClient , consultSolv, retour;
+    Button ajoutClient , rechercheClient , retour;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,7 +17,6 @@ public class GestionClients extends AppCompatActivity {
 
         ajoutClient = findViewById(R.id.btnAjoutClient);
         rechercheClient = findViewById(R.id.btnRechercheClient);
-        consultSolv= findViewById(R.id.btnConsultationSolvabilite);
         retour= findViewById(R.id.btnRetour);
 
         ajoutClient.setOnClickListener(new View.OnClickListener() {
@@ -38,14 +37,6 @@ public class GestionClients extends AppCompatActivity {
             }
         });
 
-        consultSolv.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), ConsultSolvabilite.class);
-                startActivity(intent);
-
-            }
-        });
 
         retour.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -56,25 +56,14 @@
         android:textColor="?android:attr/textColorPrimaryInverse"
         android:padding="16dp" />
 
-    <!-- Modifier Annonce Button -->
-    <Button
-        android:id="@+id/btnModifAnnonce"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/btnRechercheAnnonce"
-        android:layout_marginTop="20dp"
-        android:text="Modifier Annonce"
-        android:textSize="20sp"
-        android:backgroundTint="?attr/colorPrimary"
-        android:textColor="?android:attr/textColorPrimaryInverse"
-        android:padding="16dp" />
+
 
     <!-- Retour Button -->
     <Button
         android:id="@+id/btnRetour"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/btnModifAnnonce"
+        android:layout_below="@id/btnRechercheAnnonce"
         android:layout_marginTop="20dp"
         android:text="Retour"
         android:textSize="20sp"
