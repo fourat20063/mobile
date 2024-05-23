@@ -20,7 +20,7 @@ public class SuppAnnonce extends AppCompatActivity {
         retour.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), GestionClients.class);
+                Intent intent = new Intent(getApplicationContext(), GestionAnnonces.class);
                 startActivity(intent);
             }
         });

@@ -26,7 +26,7 @@ public class RechercheAnnonce extends AppCompatActivity {
         btnRetour.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), HomeAdmin.class);
+                Intent intent = new Intent(getApplicationContext(), GestionAnnonces.class);
                 startActivity(intent);
             }
         });
